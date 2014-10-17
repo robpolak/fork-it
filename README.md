@@ -2,8 +2,7 @@
 ===========
 Fork-It is a NodeJs module that handles the complexity of interprocess communication.  This library will abstract the complexity of sending process messages between two components.  It also creates a communication layer between the two processes that is very RPC in nature.
 
-#### For Example
-===========
+#### For Example:
 fork.child().childMethod(param1,param2,{options: 'foo'});
 fork.parent().parentMethod(param1,param2,{options: 'foo'});
 
