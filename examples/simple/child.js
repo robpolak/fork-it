@@ -1,15 +1,15 @@
 var forkIt = require('../../fork-it.js');
 
 var app = (function() {
-  function sendMessage(msg) {
+  function someCommand(msg) {
     console.log('App 2 Received: ' + msg);
   };
   return {
-    sendMessage: sendMessage
+    someCommand: someCommand
   };
 }());
 
 forkIt.initChild(app, function() {
-  forkIt.child().sendMessage('From Child');
+  forkIt.child().someCommand('From Child');
 });
 

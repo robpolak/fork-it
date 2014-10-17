@@ -4,12 +4,12 @@ var app = function() {
 
 };
 
-app.prototype.sendMessage = function(msg) {
+app.prototype.someCommand = function(msg) {
   console.log('App 1 Received: ' + msg);
 };
 
 forkIt.fork(__dirname, 'child.js', new app(), function() {
-  forkIt.child().sendMessage('From Parent');
+  forkIt.child().someCommand('From Parent');
 });
 
 
