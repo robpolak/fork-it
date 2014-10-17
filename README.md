@@ -1,12 +1,14 @@
-h1 fork-it
+# fork-it
 ===========
 
 Fork-It is a NodeJs module that handles the complexity of interprocess communication.
 
-h2 Usage
+## Usage
 
-h3 Simple Example
-h4 Parent.js
+### Simple Example
+Creates a simple Parent <--> Child console applications.  This example shows bi-directional communicate between processes
+
+#### Parent.js
 fork(directoryName, file, obj, callBack)
  - dirctoryName: Path where the file you want to fork is located
  - file: file to fork
