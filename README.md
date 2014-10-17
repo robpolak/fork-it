@@ -59,12 +59,12 @@ var app = function() {
 
 };
 
-app.prototype.sendMessage = function(msg) {
+app.prototype.someCommand = function(msg) {
   console.log('App 1 Received: ' + msg);
 };
 
 forkIt.fork(__dirname, 'child.js', new app(), function() {
-  forkIt.child().sendMessage('From Parent');
+  forkIt.child().someCommand('From Parent');
 });
 
 ```
@@ -79,17 +79,15 @@ forkIt.initChild(obj, callBack);
 var forkIt = require('../../fork-it.js');
 
 var app = (function() {
-  function sendMessage(msg) {
+  function someCommand(msg) {
     console.log('App 2 Received: ' + msg);
   };
   return {
-    sendMessage: sendMessage
+    someCommand: someCommand
   };
 }());
 
 forkIt.initChild(app, function() {
-  forkIt.child().sendMessage('From Child');
+  forkIt.child().someCommand('From Child');
 });
-
-
 ```
