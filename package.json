@@ -1,14 +1,26 @@
 {
   "name": "fork-it",
   "version": "1.0.0",
-  "description": "Fork-It",
+  "description": "Library for managing forking processes",
+  "main": "./lib/fork-it.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "underscore": "^1.7.0"
   },
-  "main": "forkIt.js",
-  "directories": {
-    "lib": "./lib"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robpolak/fork-it"
   },
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "fork",
+    "process",
+    "ipc"
+  ],
+  "author": "Rob Polak <rpolak@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robpolak/npm-fork-it/issues"
+  }
 }
