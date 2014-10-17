@@ -1,0 +1,14 @@
+{
+  "name": "fork-it",
+  "version": "1.0.0",
+  "description": "Fork-It",
+  "dependencies": {
+    "underscore": "^1.7.0"
+  },
+  "main": "forkIt.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "author": "",
+  "license": "ISC"
+}
