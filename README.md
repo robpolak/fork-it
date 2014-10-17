@@ -10,10 +10,10 @@ Creates a simple Parent <--> Child console applications.  This example shows bi-
 
 #### Parent.js
 fork(directoryName, file, obj, callBack)
- - dirctoryName: Path where the file you want to fork is located
- - file: file to fork
- - obj: the object you wish to share with the child process
- - callback: ready callback function
+  *dirctoryName*: Path where the file you want to fork is located
+  *file*: file to fork
+  *obj*: the object you wish to share with the child process
+  *callback*: ready callback function
 
 ```
 var forkIt = require('../../fork-it.js');
