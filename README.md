@@ -53,7 +53,7 @@ fork(directoryName, file, obj, callBack)
   *callback*: ready callback function
 
 ```
-var forkIt = require('../../fork-it.js');
+var forkIt = require('fork-it');
 
 var app = function() {
 
@@ -76,7 +76,7 @@ forkIt.initChild(obj, callBack);
   *callback*: Ready callback function
 
 ```
-var forkIt = require('../../fork-it.js');
+var forkIt = require('fork-it');
 
 var app = (function() {
   function someCommand(msg) {
