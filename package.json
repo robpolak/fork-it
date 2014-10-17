@@ -1,5 +1,6 @@
 {
   "name": "fork-it",
+  "homepage": "https://github.com/robpolak/fork-it",
   "version": "1.0.0",
   "description": "Library for managing forking processes",
   "main": "./lib/fork-it.js",
@@ -18,6 +19,12 @@
     "process",
     "ipc"
   ],
+  "engines": {
+    "node": ">=0.10"
+  },
+  "devDependencies": {
+
+  },
   "author": "Rob Polak <rpolak@gmail.com>",
   "license": "MIT",
   "bugs": {
