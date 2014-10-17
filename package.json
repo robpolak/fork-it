@@ -1,9 +1,9 @@
 {
   "name": "fork-it",
   "homepage": "https://github.com/robpolak/fork-it",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Library for managing forking processes",
-  "main": "./lib/fork-it.js",
+  "main": "fork-it.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
