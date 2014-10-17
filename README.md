@@ -3,12 +3,13 @@
 
 Fork-It is a NodeJs module that handles the complexity of interprocess communication.
 
-## Usage
+### Examples
 
-### Simple Example
+#### Simple Example
 Creates a simple Parent <--> Child console applications.  This example shows bi-directional communicate between processes
 
-#### Parent.js
+##### Parent.js
+
 fork(directoryName, file, obj, callBack)
   *dirctoryName*: Path where the file you want to fork is located
   *file*: file to fork
@@ -32,10 +33,11 @@ forkIt.fork(__dirname, 'child.js', new app(), function() {
 
 ```
 
-h4 Child.js
+#### Child.js
+
 forkIt.initChild(obj, callBack);
- - obj: The object you would like to share with the parent
- - callback: Ready callback function
+  *obj*: The object you would like to share with the parent
+  *callback*: Ready callback function
 
 ```
 var forkIt = require('../../fork-it.js');
