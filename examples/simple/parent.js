@@ -1,4 +1,5 @@
 var forkIt = require('../../fork-it.js');
+global.forkIt.config.logging.threshold = 'all';
 
 var app = function() {
 
