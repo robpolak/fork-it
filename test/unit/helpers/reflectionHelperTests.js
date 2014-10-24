@@ -89,7 +89,7 @@ describe('Reflection Helper Tests', function() {
       };
 
       var funcCb = function(func, method, args) {
-        expect(func).to.eql("method");
+        expect(func).to.eql("function");
         expect(method).to.eql("method1");
         expect(args[0]).to.eql(1);
         expect(args[1]).to.eql(5);

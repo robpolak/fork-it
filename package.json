@@ -32,5 +32,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/robpolak/npm-fork-it/issues"
+  },
+  "scripts": {
+    "test": "mocha --recursive test/unit"
   }
 }
