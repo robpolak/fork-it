@@ -11,7 +11,6 @@ Simple Parent/Child process relationship
 *Parent.js*
 ```
 var forkIt = require('fork-it');
-
 var app = function() {};
 
 //This will we the command we run cross process
@@ -39,12 +38,12 @@ var app = (function() {
   };
 }());
 
+//Initialize the child object
 forkIt.initChild(app, function() {
   console.log('Child Ready.. sending message');
   forkIt.child().someCommand('From Child'); //Invoke a process on the Parent.js
 });
 ```
-
 
 ### Installation
     $ npm install fork-it
