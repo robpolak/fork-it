@@ -6,10 +6,45 @@ Fork-It is a NodeJs module that handles the complexity of interprocess communica
 # Status : BETA (unstable)
 
 #### For Example:
+Simple Parent/Child process relationship
+
+*Parent.js*
 ```
-fork.child().childMethod(param1,param2,{options: 'foo'});
-fork.parent().parentMethod(param1,param2,{options: 'foo'});
+var forkIt = require('fork-it');
+
+var app = function() {};
+
+//This will we the command we run cross process
+app.prototype.someCommand = function(msg) {     
+  console.log('App 1 Received: ' + msg);
+};
+
+//Now we fork the proc
+forkIt.fork(__dirname, 'child.js', new app(), function() {
+  forkIt.child().someCommand('From Parent'); //Invoke a method on Child.js
+});
 ```
+
+*Child.js*
+``` 
+var forkIt = require('fork-it');
+
+//Set up our child method
+var app = (function() {
+  function someCommand(msg) {
+    console.log('App 2 Received: ' + msg);
+  };
+  return {
+    someCommand: someCommand
+  };
+}());
+
+forkIt.initChild(app, function() {
+  console.log('Child Ready.. sending message');
+  forkIt.child().someCommand('From Child'); //Invoke a process on the Parent.js
+});
+```
+
 
 ### Installation
     $ npm install fork-it
